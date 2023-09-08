@@ -12,7 +12,7 @@ int main(void)
 	int start = 97;
 	int end = 122;
 
-	for (start; start <= end; start++)
+	for (start = 97; start <= end; start++)
 	{
 		printf("%c", start);
 	}
