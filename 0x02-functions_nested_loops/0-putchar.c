@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+  * main - The entry function
+  *
+  * Return: 0 for succesful exit
+  */
 int main(void)
 {
 	_putchar('_');
