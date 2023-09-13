@@ -5,8 +5,16 @@
   * Return: 0 for successful exit
   */
 
-int main(void)
+void print_alphabet_x10(void)
 {
-	
-	return (0);
+	int i,j;
+
+	for (i = 0; i <= 9; i++)
+	{
+		for (j = 'a'; j <= 'z'; j++)
+		{
+			_putchar(j);
+		}
+		_putchar('\n');
+	}
 }
