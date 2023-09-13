@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * main - Entry point for our code
+  * print_alphabet - a function that prints alphabets
   *
   * Return: 0 for successful exit
   */
