@@ -1,13 +1,13 @@
 #include "main.h"
 /**
-  * main - Entry point for our code
+  * print_alphabet_x10 - print list of alphabets 10 times
   *
   * Return: 0 for successful exit
   */
 
 void print_alphabet_x10(void)
 {
-	int i,j;
+	int i, j;
 
 	for (i = 0; i <= 9; i++)
 	{
