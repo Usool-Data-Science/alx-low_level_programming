@@ -1,6 +1,7 @@
 #include "main.h"
 /**
   * positive_or_negative - Test if our input is zero
+  * @i: the variable been tested
   *
   * Return: 0 for successful exit
   */
