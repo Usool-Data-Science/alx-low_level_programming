@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
   * main - Entry point for our code
   *
@@ -11,6 +12,5 @@ int main(void)
 
 	i = 0;
 	positive_or_negative(i);
-	
 	return (0);
 }
