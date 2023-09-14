@@ -1,7 +1,8 @@
 #include "main.h"
 /**
-  * maul - multiplies 2 integers
-  *
+  * mul - multiplies 2 integers
+  * @a: first integer
+  * @b: second integer
   * Return: 0 for successful exit
   */
 
