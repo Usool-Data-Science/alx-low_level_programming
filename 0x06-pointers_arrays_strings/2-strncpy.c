@@ -7,26 +7,21 @@
   *
   * Return: 0 for successful exit
   */
-
 char *_strncpy(char *dest, char *src, int n)
 {
-	int slen = 0;
-	int i;
+	int j;
 
-	while (src[slen] != '\0')
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		slen++;
+		dest[j] = src[j];
+		j++;
 	}
-	if (n > slen)
+	while (j < n)
 	{
-		*dest = *src;
+		dest[j] = '\0';
+		j++;
 	}
-	else
-	{
-		for (i = 0; i < n; i++)
-		{
-			dest[i] = src[i];
-		}
-	}
+
 	return (dest);
 }
