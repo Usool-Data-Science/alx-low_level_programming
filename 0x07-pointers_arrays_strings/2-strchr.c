@@ -3,6 +3,7 @@
   * _strchr - character finder
   * @s: The string to search
   * @c: The character being searched
+  *
   * Return: 0 for successful exit
   */
 
