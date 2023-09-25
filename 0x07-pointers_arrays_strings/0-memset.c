@@ -1,7 +1,9 @@
 #include "main.h"
 /**
-  * main - Entry point for our code
-  *
+  * _memset - memory filler
+  * @s: pointer to the string
+  * @b: character to fill with
+  * @n: number of time to fill
   * Return: 0 for successful exit
   */
 
