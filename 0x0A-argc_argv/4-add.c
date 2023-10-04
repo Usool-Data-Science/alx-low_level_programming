@@ -6,9 +6,8 @@
 #include <stdbool.h>
 
 /**
-  * main - Entry point for our code
-  * @argc: argument counts
-  * @argv: vector of arguments
+  * isNum - Check if its a nunber
+  * @str: string argument
   *
   * Return: 0 for successful exit
   */
@@ -25,6 +24,14 @@ bool isNum(char *str)
 	}
 	return (true);
 }
+
+/**
+  * main - Entry point
+  * @argc: argument counts
+  * @argv: argument vector
+  *
+  * Return: 0 for success.
+  */
 
 int main(int argc, char *argv[])
 {
