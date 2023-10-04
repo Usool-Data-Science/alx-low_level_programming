@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  * main - Entry point for our code
+  * _strdup - string duplicator
+  * @str: string to duplicate
   *
   * Return: 0 for successful exit
   */
@@ -18,7 +19,7 @@ char *_strdup(char *str)
 		str++;
 	}
 
-	newstr = malloc(len);
+	newstr = malloc(len + 1);
 	if (newstr == NULL)
 	{
 		return (NULL);
