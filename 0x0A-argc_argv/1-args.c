@@ -2,7 +2,7 @@
 /**
   * main - Entry point for our code
   * @argc: argument count
-  *
+  * @argv: vector of arguments
   * Return: 0 for successful exit
   */
 
