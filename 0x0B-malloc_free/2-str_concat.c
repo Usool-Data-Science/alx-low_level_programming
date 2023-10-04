@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		for (i = 0; i < len1; i++)
+		for (i = 0; i < len1 - 1; i++)
 		{
 			*(newstr + i) = s1[i];
 		}
