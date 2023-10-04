@@ -37,11 +37,11 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		for (i = 0; i < len1 - 1; i++)
+		for (i = 0; i < len1; i++)
 		{
 			*(newstr + i) = s1[i];
 		}
-		for (j = i + 1; j < size; j++)
+		for (j = i; j < size; j++)
 		{
 			*(newstr + j) = s2[j];
 		}
