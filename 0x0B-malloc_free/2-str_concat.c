@@ -15,11 +15,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		s1 = '\0';
+		s1 = '';
 	}
 	if (s2 == NULL)
 	{
-		s2 = '\0';
+		s2 = '';
 	}
 	S1 = s1, S2 = s2;
 	while (*S1 != '\0')
