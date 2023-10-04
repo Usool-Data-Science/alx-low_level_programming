@@ -4,10 +4,8 @@
   * str_concat - string concatinator
   * @s1: first string
   * @s2: second string
-  *
   * Return: 0 for successful exit
   */
-
 char *str_concat(char *s1, char *s2)
 {
 	int size, i, j;
@@ -17,28 +15,22 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = '\0';
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = '\0';
 	}
-	S1 = s1;
-	S2 = s2;
-
+	S1 = s1, S2 = s2;
 	while (*S1 != '\0')
 	{
-		len1++;
-		S1++;
+		len1++,	S1++;
 	}
 	while (*S2 != '\0')
 	{
-		len2++;
-		S2++;
+		len2++, S2++;
 	}
-
-	size = len1 + len2;
-	newstr = malloc(len1 + len2 + 1);
+	size = len1 + len2, newstr = malloc(len1 + len2 + 1);
 	if (newstr == NULL)
 	{
 		return (NULL);
