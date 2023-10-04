@@ -15,6 +15,14 @@ char *str_concat(char *s1, char *s2)
 	char *newstr;
 	int len1 = 0, len2 = 0;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	S1 = s1;
 	S2 = s2;
 
