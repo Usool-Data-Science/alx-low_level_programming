@@ -2,13 +2,6 @@
 #define DOG_H
 
 /**
-  * dog - A new alaise for struct dog
-  */
-
-typedef struct dog dog;
-void init_dog(struct dog *d, char *name, float age, char *owner);
-
-/**
   * struct dog - A new data type dog
   * @name: Name of the dog
   * @age: Age of the dog
@@ -22,5 +15,7 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif /* DOC_H */
