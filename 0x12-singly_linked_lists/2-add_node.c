@@ -22,7 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 		length++; /* Get the size of str*/
 	}
 
-	new_element = (list_t *) malloc(sizeof (list_t));
+	new_element = (list_t *) malloc(sizeof(list_t));
 	if (new_element == NULL)
 	{
 		return (NULL);
