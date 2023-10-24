@@ -13,17 +13,13 @@
 size_t listint_len(const listint_t *h)
 {
 	size_t elem_count = 0;
-	const listint_t *current;
+	const listint_t *current = h;
 
-	if (h)
-	{
-		current = h;
-	}
-	else
+	if (!h)
 	{
 		return (1);
 	}
-	while (current->next != NULL)
+	while (current != NULL && current->next != NULL)
 	{
 		/* Exit the loop without counting the last node */
 		elem_count++;

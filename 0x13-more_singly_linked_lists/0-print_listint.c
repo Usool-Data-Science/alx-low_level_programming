@@ -19,7 +19,7 @@ size_t print_listint(const listint_t *h)
 		return (1);
 	}
 
-	while (current->next != NULL)
+	while (current->next && current->next != NULL)
 	{
 		printf("%d\n", current->n);
 		elem_count++;
