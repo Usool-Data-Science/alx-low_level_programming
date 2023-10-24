@@ -26,5 +26,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		counter++;
 	}
 
+	if (counter != index)
+	{
+	/* if the counter is not exactly on the index, then indexx is out of range*/
+		return (NULL);
+	}
 	return (current);
 }
