@@ -25,6 +25,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	current->next = *head;
 	/* Now update the new head position to the current value*/
 	*head = current;
-
+	free(current);
 	return (*head);
 }
