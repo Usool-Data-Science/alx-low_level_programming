@@ -26,9 +26,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (idx == 0)
 	{
+		/* If the index is at the beginning of the list*/
 		newNode->next = *head;
 		*head = newNode;
-		return (*head);
+		return (newNode);
 	}
 
 	while (size < idx - 1  && current != NULL)
@@ -37,6 +38,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		size++;
 	}
 
+	if (size != idx - 1)
+	{
+		/* If index is out of range*/
+		free(newNode);
+		return (NULL);
+	}
 	temp = current->next;
 	newNode->next = temp;
 	current->next = newNode;
