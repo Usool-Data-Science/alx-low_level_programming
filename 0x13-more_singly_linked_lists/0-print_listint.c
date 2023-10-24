@@ -11,13 +11,9 @@
 
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *current;
+	const listint_t *current = h;
 
-	if (h)
-	{
-		current = h;
-	}
-	else
+	if (!h)
 	{
 		return (1);
 	}
