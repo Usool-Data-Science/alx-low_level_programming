@@ -17,15 +17,11 @@ void free_listint(listint_t *head)
 		return;
 	}
 	
-	if (head->next == NULL)
-	{
-		current = head;
-	}
-	else
+	while (head != NULL)
 	{
 		current = head->next;
+		free(head);
+		head = current;
 	}
 	
-	free(head);
-	head = current;
 }
