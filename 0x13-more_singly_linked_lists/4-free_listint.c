@@ -10,8 +10,22 @@
 
 void free_listint(listint_t *head)
 {
-	listint_t *current = head->next;
-
+	listint_t *current;
+	
+	if (!head)
+	{
+		return;
+	}
+	
+	if (head->next == NULL)
+	{
+		current = head;
+	}
+	else
+	{
+		current = head->next;
+	}
+	
 	free(head);
 	head = current;
 }
