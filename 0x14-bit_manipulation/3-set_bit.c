@@ -18,7 +18,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if (index < bitSize)
 	{
 		result = (*n | (1 << index));
-		*n += (1 << index);
+		*n |= (1 << index);
 		return (result);
 	}
 
