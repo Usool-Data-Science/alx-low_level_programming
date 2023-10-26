@@ -11,8 +11,7 @@
 void print_binary(unsigned long int n)
 {
 	int bitSize = sizeof(n) * 8;
-	int bitmask = 1, i;
-	char result;
+	int i, result;
 
 	if (n == 0)
 	{
@@ -20,11 +19,10 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (i = 0; i < bitSize; i++)
+	for (i = bitSize - 1; i >= 0; i--)
 	{
-		result = (n & bitmask) ? '1': '0';
-		printf("%c", result);
-		bitmask <<= 1;
+		result = (n >> i) & 1;
+		printf("%d", result);
 	}
 	printf("\n");
 	return;
