@@ -3,25 +3,17 @@
 #include "main.h"
 
 /**
-  * print_binary - A function that convert decimal to binary.
-  * @n: The Decimal number to convert
-  *
+  * print_binary - Print the binary form of an integer
+  * @n: The integer to divide.
   */
 
 void print_binary(unsigned long int n)
 {
-	int bitSize = sizeof(n) * 8;
-	int i, result;
-
-	if (n == 0)
+	/* Divide n by 2 until it is not greater than 1*/
+	if (n > 1)
 	{
-		printf("0");
+		print_binary(n >> 1);
 	}
-
-	for (i = bitSize - 1; i >= 0; i--)
-	{
-		result = (n >> i) & 1;
-		printf("%d", result);
-	}
-	printf("\n");
+	/* if n smaller than 1 return the in corresponding char*/
+	_putchar((n & 1) + '0');
 }
