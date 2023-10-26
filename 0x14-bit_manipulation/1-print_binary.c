@@ -16,7 +16,6 @@ void print_binary(unsigned long int n)
 	if (n == 0)
 	{
 		printf("0");
-		return;
 	}
 
 	for (i = bitSize - 1; i >= 0; i--)
@@ -25,5 +24,4 @@ void print_binary(unsigned long int n)
 		printf("%d", result);
 	}
 	printf("\n");
-	return;
 }
