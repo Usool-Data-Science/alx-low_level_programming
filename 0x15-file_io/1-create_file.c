@@ -13,7 +13,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int i, writer, file_d;
+	int writer, file_d;
 
 	if (!filename)
 		return (-1);
@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		writer = write(file_d, text_content, strlen(text_content);
+		writer = write(file_d, text_content, strlen(text_content));
 		if (writer == -1)
 		{
 			close(file_d);
