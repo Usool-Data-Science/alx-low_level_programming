@@ -32,9 +32,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* Read characters of size letters from fd to buffer*/
 	reader = read(fd, buffer, letters);
-
+	if (reader == -1)
+	{
+		free(buffer);
+		close(fd);
+		return (0);
+	}
 	writer = write(1, buffer, reader);
-
+	if (writer == -1 || writer != reader)
+	{
+		free(buffer);
+		close(fd);
+		return (0);
+	}
 	free(buffer);
 	close(fd);
 	return (writer);
