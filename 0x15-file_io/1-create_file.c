@@ -15,23 +15,23 @@ int create_file(const char *filename, char *text_content)
 {
 	int i, writer, file_d;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
 	file_d = open(filename, O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
-	if (file_d < 0)
+	if (file_d == -1)
 		return (-1);
 	if (text_content == NULL)
 	{
 		text_content = "";
 	}
 
-	for (i = 0; text_content[i] != '\0'; i++)
+	for (i = 0; text_content[i]; i++)
 	{
 		writer = write(file_d, text_content, i);
 	}
 
-	if (writer < 0)
+	if (writer == -1)
 		return (-1);
 
 	close(file_d);

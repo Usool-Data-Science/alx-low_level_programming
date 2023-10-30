@@ -23,10 +23,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	fd = open(filename, O_RDONLY);
-	if (fd < 0)
+	if (fd == -1)
 		return (0);
 	/* Allocate a buffer space to hold reading result */
 	buffer = malloc(sizeof(char) * letters);
+	if (!buffer)
+		return (0);
 
 	/* Read characters of size letters from fd to buffer*/
 	reader = read(fd, buffer, letters);
