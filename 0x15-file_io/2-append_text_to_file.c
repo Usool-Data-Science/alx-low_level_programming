@@ -4,11 +4,11 @@
   * append_text_to_file - Append to end of file
   * @filename: The path to the file.
   * @text_content: the string to write
-  * 
+  *
   * Return: 1 if success -1 if there's a value.
   */
 
-int append_text_to_file (const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int writer, file_d;
 
