@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "main.h"
 
+
+void handle_error(int file_from, int file_to, char *argv[]);
+
 /**
   * main - Entry point
   * @argc: Count of arguments.
@@ -13,7 +16,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
 
-	ssize_t nchars;
+	ssize_t nchars, nwr;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -32,6 +35,9 @@ int main(int argc, char *argv[])
 		nchars = read(file_from, buffer, 1024);
 		if (nchars == -1)
 			handle_error(-1, 0, argv);
+		nwr = write(file_to, buffer, nchars);
+		if (nwr == -1)
+			handle_error(0, -1, argv);
 	}
 
 	err_close = close(file_from);
