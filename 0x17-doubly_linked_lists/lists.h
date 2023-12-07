@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
@@ -11,14 +12,16 @@
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- * 
  */
 typedef struct dlistint_s
 {
-    int n;
-    struct dlistint_s *prev;
-    struct dlistint_s *next;
+	int n;
+	struct dlistint_s *prev;
+	struct dlistint_s *next;
 } dlistint_t;
+
+/* A node creator function, its in 2-addnodeint_t.c*/
+dlistint_t *createNewNode(const int n);
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
