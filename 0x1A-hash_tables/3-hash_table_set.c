@@ -24,7 +24,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!item)
 		return (0);
 	item->key = strdup((char *) key);
+	if (item->key == NULL)
+	{
+		free(item);
+		return (0);
+	}
 	item->value = strdup((char *) value);
+	if (item->value == NULL)
+	{
+		free(item->key);
+		free(item);
+		return (0);
+	}
 	item->next = NULL;
 
 	/* 3. Check if the index item is null */
