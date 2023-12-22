@@ -12,13 +12,11 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	/* 1. Find the hash value and create temp item for iteration */
 	unsigned long int index = hash_djb2((const unsigned char *) key) % ht->size;
 	hash_node_t *temp_item, *item;
 
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
-
 	/* 2. Create item */
 	item = (hash_node_t *) malloc(sizeof(hash_node_t));
 	if (!item)
@@ -32,18 +30,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	item->value = strdup((char *) value);
 	if (item->value == NULL)
 	{
-		free(item->key);
-		free(item);
+		free(item->key), free(item);
 		return (0);
 	}
 	item->next = NULL;
-
 	/* 3. Check if the index item is null */
 	if (ht->array[index] == NULL)
-	{
 		ht->array[index] = item;
-	}
-
 	/* 4. If it is not null */
 	else
 	{
@@ -51,7 +44,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (ht->array[index]->next == NULL)
 			ht->array[index]->next = item;
 		else
-		/* Otherwise move to the end and attach it*/
 		{
 			temp_item = ht->array[index];
 			while (temp_item->next)
@@ -59,6 +51,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			temp_item->next = item;
 		}
 	}
-
 	return (1);
 }
